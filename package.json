@@ -1,0 +1,68 @@
+{
+  "name": "kunst-cli",
+  "version": "0.0.0",
+  "preferGlobal": true,
+  "description": "Markdown to markdown transformer, using remark. Handles directories.",
+  "license": "MIT",
+  "contributors": [
+    "Brendan Abbott <brendan@bloodbone.ws>",
+    "Evan Read <evan.read@temando.com>",
+    "Khoa Tran <khoa.tran@temando.com>"
+  ],
+  "keywords": [
+    "remark",
+    "markdown",
+    "runner"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@src.temando.io:temando/kunst-cli.git"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "chokidar": "^1.6.1",
+    "commander": "^2.9.0",
+    "fs-extra": "^4.0.1",
+    "glob": "^7.1.0",
+    "remark-parse": "^4.0.0",
+    "remark-stringify": "^4.0.0",
+    "to-vfile": "^2.1.2",
+    "unified": "^6.1.5",
+    "vfile-reporter": "^4.0.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-transform-async-to-module-method": "^6.16.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "changelog-verify": "^1.0.4",
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "fetch-mock": "^5.12.1",
+    "jest": "^21.2.1",
+    "remark-comment-config": "^5.0.1",
+    "remark-gitlab-artifact": "^0.1.2",
+    "sinon": "^4.0.1",
+    "version-changelog": "^2.1.0",
+    "vfile": "^2.2.0"
+  },
+  "scripts": {
+    "build": "rm -Rf bin && $(npm bin)/babel src --out-dir bin --copy-files --source-maps inline",
+    "deploy": "npm run build && npm link",
+    "lint": "$(npm bin)/eslint src",
+    "teardown": "rm -Rf test/runtime",
+    "test": "npm run teardown && $(npm bin)/jest",
+    "test:coverage": "npm run teardown && $(npm bin)/jest --coverage --coverageReporters text text-summary",
+    "preversion": "npm run build && npm run lint && npm run test"
+  },
+  "bin": {
+    "kunst": "./bin/kunst-cli.js"
+  },
+  "main": "./bin/kunst-cli.js",
+  "files": [
+    "bin"
+  ]
+}

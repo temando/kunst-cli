@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "remark-comment-config",
+    [
+      "remark-gitlab-artifact",
+      {
+        "apiBase": "https://gitlab.com",
+        "gitlabApiToken": "abc123"
+      }
+    ]
+  ]
+}
