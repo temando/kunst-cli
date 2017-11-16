@@ -25,7 +25,7 @@ program
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();
-  process.exit(0);
+  process.exit(1);
 }
 
 const { source, target } = program;
@@ -35,7 +35,7 @@ const configPath = `${process.cwd()}/${program.config}`;
 
 if (!fs.existsSync(configPath)) {
   logger.error(`Config file does not exist at ${configPath}`);
-  process.exit(0);
+  process.exit(1);
 }
 
 // Load preset
@@ -50,7 +50,7 @@ if (configPath.endsWith('.js')) {
   preset = loadRemarkPreset(config);
 } else {
   logger.error(`Unsupported data type: ${configPath}. Must be either json or js.`);
-  process.exit(0);
+  process.exit(1);
 }
 
 if (program.clean) {
