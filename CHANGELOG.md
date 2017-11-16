@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][]
 
+## [1.0.1][] - 2017-11-16
+
 ### Fixed
 
 - Correct the exit code for when things go awry.
@@ -14,5 +16,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 Kunst is open sourced after a year of internal use by Temando's Developer Experience team.
 
-[Unreleased]: https://github.com/temando/kunst-cli/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/temando/kunst-cli/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/temando/kunst-cli/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/temando/kunst-cli/tree/v1.0.0
