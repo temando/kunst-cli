@@ -6,7 +6,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][]
 
-Nil.
+### Fixed
+
+- Correct the exit code for when things go awry.
 
 ## [1.0.0][] - 2017-10-20
 
