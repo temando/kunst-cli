@@ -33,8 +33,8 @@ export default function setup(unifiedPreset) {
   const vFileWrite = Promise.promisify(toVFile.write);
   const remarkInstance = unified()
     .use(parse, { gfm: true, yaml: true, commonmark: true })
-    .use(unifiedPreset)
     .use(stringify)
+    .use(unifiedPreset)
     .freeze();
 
   /**
