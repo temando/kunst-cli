@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][]
 
+## [1.0.2][] - 2017-11-28
+
 ### Fixed
 
 - `remark-stringify` and `remark-parse` plugins are added _first_, before the preset to ensure better compatibility with plugins that require these to exist (eg. `remark-frontmatter`).
@@ -20,6 +22,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 Kunst is open sourced after a year of internal use by Temando's Developer Experience team.
 
-[Unreleased]: https://github.com/temando/kunst-cli/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/temando/kunst-cli/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/temando/kunst-cli/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/temando/kunst-cli/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/temando/kunst-cli/tree/v1.0.0
