@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][]
 
+### Fixed
+
+- `remark-stringify` and `remark-parse` plugins are added _first_, before the preset to ensure better compatibility with plugins that require these to exist (eg. `remark-frontmatter`).
+
 ## [1.0.1][] - 2017-11-16
 
 ### Fixed
