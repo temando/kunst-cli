@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][]
 
+## [1.0.3][] - 2018-01-08
+
 ### Fixed
 
 - Support plugins that have boolean values for settings.
@@ -26,7 +28,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 Kunst is open sourced after a year of internal use by Temando's Developer Experience team.
 
-[Unreleased]: https://github.com/temando/kunst-cli/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/temando/kunst-cli/compare/v1.0.3...HEAD
+[1.0.3]: https://github.com/temando/kunst-cli/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/temando/kunst-cli/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/temando/kunst-cli/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/temando/kunst-cli/tree/v1.0.0
