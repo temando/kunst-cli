@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][]
 
+### Fixed
+
+- Support plugins that have boolean values for settings.
+
 ## [1.0.2][] - 2017-11-28
 
 ### Fixed

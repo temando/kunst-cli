@@ -61,4 +61,29 @@ describe('load-remark-preset', () => {
     expect(plugin[1].gitlabApiToken).toBe('abc123');
     expect(plugin[1].directory).toBe('blah');
   });
+
+  it('load config with values', () => {
+    const config = {
+      plugins: [
+        [
+          'remark-gitlab-artifact',
+          {
+            gitlabApiToken: true,
+            directory: 'blah',
+          },
+        ],
+      ],
+    };
+
+    const preset = loadRemarkPreset(config);
+    expect(preset.plugins).toBeInstanceOf(Array);
+    expect(preset.plugins).toHaveLength(1);
+
+    const plugin = preset.plugins[0];
+    expect(plugin).toBeInstanceOf(Array);
+    expect(plugin).toHaveLength(2);
+    expect(typeof plugin[0]).toBe('function');
+    expect(plugin[1].gitlabApiToken).toBe(true);
+    expect(plugin[1].directory).toBe('blah');
+  });
 });
