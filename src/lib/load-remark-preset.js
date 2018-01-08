@@ -26,10 +26,12 @@ function parseOptions(options) {
     let value = options[key];
 
     // Replace if value matches ${...}
-    const match = value.match(/\${(.*)}$/);
-    if (match) {
-      const variableName = match[1];
-      value = getEnvVariable(variableName);
+    if (typeof value.match === 'function') {
+      const match = value.match(/\${(.*)}$/);
+      if (match) {
+        const variableName = match[1];
+        value = getEnvVariable(variableName);
+      }
     }
 
     parsedOptions[key] = value;
